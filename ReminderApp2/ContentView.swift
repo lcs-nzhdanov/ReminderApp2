@@ -48,17 +48,11 @@ struct ContentView: View {
                     }
                     
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                  //  .font(.system(size: 20))
                     .frame(height: 66)
                 }
                 .frame(minHeight: 590)
                 .listStyle(.plain)
                 .padding(.leading, 12.5)
-                
-                
-          //      Spacer(minLength: 10)
-                
-                
             }
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
@@ -104,10 +98,6 @@ struct ContentView: View {
                 .tint(.blue)
             
         }
-      //  .frame(height: 40)
-        
-
-        
     }
 }
 
