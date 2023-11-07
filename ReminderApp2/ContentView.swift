@@ -53,32 +53,23 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                HStack {
+                List {
+                    Group{
+                        ListObject(task:"Call auto body shop", whenToDo: "2023-11-12")
                         
-                        ZStack {
-                            Circle()
-                                .frame(width: 23)
-                                .foregroundStyle(Color.gray)
-                            
-                            Circle()
-                                .frame(width: 21)
-                                .foregroundStyle(Color.white)
-                        }
-                        .padding(.bottom, 20)
-                        .padding(.horizontal, 10)
-
-                    
-                    VStack {
-                        HStack {
-                            Text("clean a car")
-                            Spacer()
-                        }
+                        ListObject(task:"Feed Piper", whenToDo: "Tomorrow, 8:00 AM, Daily")
                         
-                        HStack {
-                            Text("tomorrow")
-                                .foregroundStyle(Color.gray)
-                            Spacer()
-                        }
+                        ListObject(task:"Write lesson about interactibe apps", whenToDo: "Tomorrow, 6:00 PM")
+                        
+                        ListObject(task:"Take Piper to the vet", whenToDo: "2023-11-29")
+                        
+                        ListObject(task:"Drop of donations at Goodwill", whenToDo: "2023-11-11")
+                        
+                        ListObject(task:"Call plumber about clog in sink", whenToDo: "Tomorrow, 2:00 PM")
+                        
+                        ListObject(task:"Call dentist to schedule appointment", whenToDo: "2023-11-15, 4:00 PM")
+                        
+                        ListObject(task:"Call mechanic to get TARDIS repaired", whenToDo: "Tomorrow, 12:00 PM")
                     }
                 }
             }
