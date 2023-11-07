@@ -52,6 +52,7 @@ struct ContentView: View {
                     .padding(.horizontal)
                 
                 Spacer()
+            }
                 
                 List {
                     Group{
@@ -71,11 +72,28 @@ struct ContentView: View {
                         
                         ListObject(task:"Call mechanic to get TARDIS repaired", whenToDo: "Tomorrow, 12:00 PM")
                     }
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .frame(height: 66)
                 }
+                .frame(minHeight: 590)
+                .listStyle(.plain)
+                .padding(.leading, 12.5)
+            
+            HStack {
+                Image(systemName: "plus.circle.fill")
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(.blue)
+                Text("New Reminder")
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(.blue)
+                Spacer()
+            }
+            .padding(.horizontal, 20)
             }
         }
     }
-}
     #Preview {
         ContentView()
     }
