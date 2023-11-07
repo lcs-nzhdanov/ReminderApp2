@@ -39,7 +39,20 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+        
+        VStack(spacing: 15) {
             
+            
+            HStack{
+                Text("To do")
+                    .font(.system(size: 40))
+                    .foregroundStyle(Color.blue)
+                    .bold()
+                    .padding(.horizontal)
+                
+                Spacer()
+            }
         }
     }
 }
