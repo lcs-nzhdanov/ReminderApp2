@@ -1,58 +1,32 @@
 //
 //  ContentView.swift
-//  ReminderApp2
+//  ReminderAppDesign
 //
-//  Created by Nikita Zhdanov on 2023-11-06.
+//  Created by Nikita Zhdanov on 2023-11-04.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack {
-            
-            VStack{
-                
-            }
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button(action: {}) {
-                        Image(systemName: "chevron.left")
-                            .font(.system(size: 20))
-                            .bold()
-                        Text("Lists")
-                            .font(.system(size: 20))
-                    }
-                }
-                
-                ToolbarItem {
-                    Button(action: { }) {
-                        Image(systemName: "square.and.arrow.up")
-                            .font(.system(size: 20))
-                    }
-                }
-                
-                ToolbarItem {
-                    Button(action: { }) {
-                        Image(systemName: "ellipsis.circle")
-                            .font(.system(size: 20))
-                    }
-                }
-            }
-        }
         
-        VStack(spacing: 15) {
-            
-            
-            HStack {
-                Text("To do")
-                    .font(.system(size: 40))
-                    .foregroundStyle(Color.blue)
-                    .bold()
-                    .padding(.horizontal)
+        
+        NavigationStack {
+
+            VStack(spacing: 15) {
                 
-                Spacer()
-            }
+                
+                HStack{
+                    Text("To do")
+                        .font(.system(size: 40))
+                        .foregroundStyle(Color.blue)
+                        .bold()
+                        .padding(.horizontal)
+                        .fontDesign(.rounded)
+                        
+                    Spacer()
+                }
+                
                 
                 List {
                     Group{
@@ -72,28 +46,71 @@ struct ContentView: View {
                         
                         ListObject(task:"Call mechanic to get TARDIS repaired", whenToDo: "Tomorrow, 12:00 PM")
                     }
+                    
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                  //  .font(.system(size: 20))
                     .frame(height: 66)
                 }
                 .frame(minHeight: 590)
                 .listStyle(.plain)
                 .padding(.leading, 12.5)
+                
+                
+          //      Spacer(minLength: 10)
+                
+                
+            }
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: {}) {
+                            Image(systemName: "chevron.left")
+                                .font(.system(size: 20))
+                                .bold()
+                            Text("Lists")
+                                .font(.system(size: 20))
+                        }
+                    }
+                    
+                    ToolbarItem {
+                        Button(action: { }) {
+                            Image(systemName: "square.and.arrow.up")
+                               .font(.system(size: 20))
+                        }
+                    }
+                    
+                    ToolbarItem {
+                        Button(action: { }) {
+                            Image(systemName: "ellipsis.circle")
+                                .font(.system(size: 20))
+                                .padding(.top, 7)
+                        }
+                    }
+                    
+                    ToolbarItemGroup(placement: .bottomBar) {
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                            Image(systemName: "plus.circle.fill")
+                                .font(.system(size: 20))
+                                .bold()
+                                .foregroundColor(.blue)
+                            Text("New Reminder")
+                                .font(.system(size: 20))
+                                .bold()
+                                .foregroundColor(.blue)
+                        }
+                        Spacer()
+                    }
+                    
+                }
+                .tint(.blue)
             
-            HStack {
-                Image(systemName: "plus.circle.fill")
-                    .font(.system(size: 20))
-                    .bold()
-                    .foregroundColor(.blue)
-                Text("New Reminder")
-                    .font(.system(size: 20))
-                    .bold()
-                    .foregroundColor(.blue)
-                Spacer()
-            }
-            .padding(.horizontal, 20)
-            }
         }
+      //  .frame(height: 40)
+        
+
+        
     }
-    #Preview {
-        ContentView()
-    }
+}
+
+#Preview {
+    ContentView()
+}
