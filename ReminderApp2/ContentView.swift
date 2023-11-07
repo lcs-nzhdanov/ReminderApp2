@@ -9,16 +9,40 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            
+            VStack{
+                
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: {}) {
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 20))
+                            .bold()
+                        Text("Lists")
+                            .font(.system(size: 20))
+                    }
+                }
+                
+                ToolbarItem {
+                    Button(action: { }) {
+                        Image(systemName: "square.and.arrow.up")
+                            .font(.system(size: 20))
+                    }
+                }
+                
+                ToolbarItem {
+                    Button(action: { }) {
+                        Image(systemName: "ellipsis.circle")
+                            .font(.system(size: 20))
+                    }
+                }
+            }
+            
         }
-        .padding()
     }
 }
-
-#Preview {
-    ContentView()
-}
+    #Preview {
+        ContentView()
+    }
