@@ -44,7 +44,7 @@ struct ContentView: View {
         VStack(spacing: 15) {
             
             
-            HStack{
+            HStack {
                 Text("To do")
                     .font(.system(size: 40))
                     .foregroundStyle(Color.blue)
@@ -52,6 +52,35 @@ struct ContentView: View {
                     .padding(.horizontal)
                 
                 Spacer()
+                
+                HStack {
+                        
+                        ZStack {
+                            Circle()
+                                .frame(width: 23)
+                                .foregroundStyle(Color.gray)
+                            
+                            Circle()
+                                .frame(width: 21)
+                                .foregroundStyle(Color.white)
+                        }
+                        .padding(.bottom, 20)
+                        .padding(.horizontal, 10)
+
+                    
+                    VStack {
+                        HStack {
+                            Text("clean a car")
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Text("tomorrow")
+                                .foregroundStyle(Color.gray)
+                            Spacer()
+                        }
+                    }
+                }
             }
         }
     }
